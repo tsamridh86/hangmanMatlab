@@ -1,0 +1,61 @@
+Circle plotting method
+th = 0:pi/50:2*pi;
+xunit =  cos(th) + 3;
+yunit =  sin(th) + 8;
+h = plot(xunit, yunit);
+
+
+to draw the pole of the hangman
+axes(handles.displayGraph);
+upperBarX = 0:3;
+upperBarY(1:4) = 10;		%Vectors must be of equal size inorder to plot a graph
+poleX(1:10) = 0;
+poleY = 0:10;
+lowerBarX = -1:1;
+lowerBarY(1:3) = 0;
+plot(upperBarX,upperBarY,'k',poleX,poleY,'k',lowerBarX,lowerBarY,'k','LineWidth',4)
+axis([-2 6 0 10])		%k denotes the color black
+axis off;
+handles.noOfTries = 0;	%global variable noOfTries
+
+
+branching function
+function myFunc(hObject,handles,str)
+handles.noOfTries = handles.noOfTries + 1;
+set(handles.displayText,'string',handles.noOfTries);
+%This line updates the data of the GUI
+guidata(hObject, handles);
+
+to create an array of strings 
+arr = char('name','place','animal','thing');
+each element can be accessed by using 2D matrix methods
+
+
+to generate a random number between 0 & 1
+rand(1)
+this can be used in conjuction with some basic math to acheive answers
+ceil(lowerLimit +(upperLimit - lowerLimit)*rand(1))
+
+vector values for body
+bodyY = 3:7;
+bodyX(1:5) = 3;
+
+vector values for leftHand
+leftHandX = [2 3]
+leftHandY = [4 6]
+
+vector values for rightHand
+rightHandX = [3 4]
+rightHandY = [6 4]
+
+vector values for leftLeg
+leftLegX = [2 3]
+leftLegY = [1 3]
+
+vector values for rightLeg
+rightLegX = [3 4]
+rightLegY = [3 1]
+
+vector values for rope
+ropeX = [3 3]
+ropeY = [9  10]
