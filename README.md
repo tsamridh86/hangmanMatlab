@@ -32,5 +32,7 @@ If the player wins, his/her score is calculated as :
 
 Enjoy the Game & the code.
 
--Samridh Tuladhar.
-Made by my team :D
+Made by:
+Aishwarya Panchal
+Rajul Nahar
+Samridh Tuladhar
